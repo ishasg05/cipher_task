@@ -32,8 +32,7 @@ public:
             "cipher_message", 10, std::bind(&CheckAnswerNode::topic_callback, this, std::placeholders::_1));
 
         service_ = this->create_service<cipher_interfaces::srv::CipherAnswer>(
-            "cipher_answer", std::bind(&CheckAnswerNode::validate_callback, this,
-                                       std::placeholders::_1, std::placeholders::_2));
+            "cipher_answer", std::bind(&CheckAnswerNode::validate_callback, this, std::placeholders::_1, std::placeholders::_2));
     }
 
 private:
